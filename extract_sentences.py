@@ -81,10 +81,10 @@ def break_sentences_th(f):
             out.write('\n')
             
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--en_dir', type=str)
-    parser.add_argument('--th_dir', type=str)
-    args = parser.parse_args()
+    argparser = argparse.ArgumentParser()
+    argparser.add_argument('--en_dir', type=str)
+    argparser.add_argument('--th_dir', type=str)
+    args = argparser.parse_args()
     
     pdf_ens = glob.glob(f'{args.en_dir}*.pdf')
     pdf_ths = glob.glob(f'{args.th_dir}*.pdf')
